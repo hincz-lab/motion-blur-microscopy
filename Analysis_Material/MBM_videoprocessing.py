@@ -99,9 +99,9 @@ def eccentricity(hull): #hull=ConvexHull object
     ecc = eccs[0] #should only be 1!
   return ecc
 
-def main(new_model, video_path, celltype, autoconvex,frames_range=(),custom_thresh=()):
+def main(model_path, video_path, celltype, autoconvex,frames_range,custom_thresh):
     """"
-    new_model: path to model for segmentation
+    model_path: path to model for segmentation
     
     video_path: path to video to be analyzed
     
@@ -151,9 +151,10 @@ def main(new_model, video_path, celltype, autoconvex,frames_range=(),custom_thre
     else:
         print('ERROR: celltype value invalid. Please try again with "srbc", "cart", or "custom"')
         sys.exit(0)
+        
+    new_model = tf.keras.models.load_model(model_path)
     
     min_frames=0
-    max_frames=1000000
     if frames_range:
         if len(frames_range)!=2:
             print("ERROR: frames_range must be two numbers: the beginning frame and end frame to be analyzed.")
@@ -187,11 +188,10 @@ def main(new_model, video_path, celltype, autoconvex,frames_range=(),custom_thre
             max_frames = frame_num-1
             print("Can't receive frame (stream end?). Exiting ...")
             break
-        if limit_frames==True:
-          if frame_num > max_frames:
-              break
-          if frame_num < min_frames:
-              pass
+        if limit_frames==True and frame_num >= max_frames:
+            break
+        elif limit_frames==True and frame_num <= min_frames:
+            pass
         #make prediction on "frame", collecting size and location of blobs
         else:
             test_Image = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
@@ -325,8 +325,6 @@ def main(new_model, video_path, celltype, autoconvex,frames_range=(),custom_thre
                   location = (float(row[1]),float(row[2])) # allow cell to be +/- 5 to be the same
                   ecc = float(row[4])
                   color = float(row[5])
-                  abscolor = float(row[6])
-                  darkestcolor = float(row[7])
                   # check if cell rolls left, can only move +/- 5 up or down
                   roll_poss = [loc[1] for loc in temp_data if loc[1][1]-30<=location[1] and loc[1][1]-5>location[1]]
                   roll_x_poss = [r_p for r_p in roll_poss if r_p[0]>=location[0]-5 and r_p[0]<=location[0]+5]
@@ -358,17 +356,17 @@ def main(new_model, video_path, celltype, autoconvex,frames_range=(),custom_thre
                   if final_nums: #enter this if cell was in previous frame -- check if size w/in 50%
                     psn = [loc[1] for loc in other_data].index(final_nums[-1])
                     adhesion_data.append(adhesion_data[psn])
-                    other_data.append([frame_num, location, ecc, size, roll, color, abscolor, darkestcolor])
+                    other_data.append([frame_num, location, ecc, size, roll, color])
                     break
                   elif not final_nums and roll=='yes':
                     psn = [loc[1] for loc in other_data].index(roll_x_poss[-1])
                     adhesion_data.append(adhesion_data[psn])
-                    other_data.append([frame_num, location, ecc, size, roll, color, abscolor, darkestcolor])
+                    other_data.append([frame_num, location, ecc, size, roll, color])
                     break
                   elif not final_nums and roll=='no' and d==10: #check frame before
                     #if size>=init_thresh:
                     adhesion_data.append(cell_num)
-                    other_data.append([frame_num, location, ecc, size, roll, color, abscolor, darkestcolor])
+                    other_data.append([frame_num, location, ecc, size, roll, color])
                     cell_num += 1
                   else:
                     pass
@@ -458,8 +456,12 @@ if __name__=="__main__":
         assign_variable_dynamically(arg)
     if 'frames_range' in locals():
         frames_range = tuple(int(fff) for fff in frames_range.split(','))
+    elif 'frames_range' not in locals():
+        frames_range = ()
     if 'custom_thresh' in locals():
         custom_thresh = tuple(int(ccc) for ccc in custom_thresh.split(','))
-    main(model, video_path, celltype, autoconvex,frames_range=(),custom_thresh=())
+    elif 'custom_thresh' not in locals():
+        custom_thresh = ()
+    main(model, video_path, celltype, autoconvex,frames_range=frames_range,custom_thresh=custom_thresh)
     
     

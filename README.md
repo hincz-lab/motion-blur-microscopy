@@ -5,8 +5,8 @@
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Training Code/Data Navigation](#training-codedata-navigation)
-   * [Phase 1 Code/Data](#phase-1-codedata)
-   * [Phase 2 Code/Data](#phase-2-codedata)
+   * [Phase 1](#phase-1-codedata)
+   * [Phase 2](#phase-2-codedata)
 3. [Analysis Code/Data Navigation](#analysis-codedata-navigation)
 
 ## Introduction

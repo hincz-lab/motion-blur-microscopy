@@ -24,6 +24,8 @@ When you enter the [Training_Material](/Training_Material/) directory, you will 
 
 ### Phase 1 Code/Data
 
+Phase 1 of the machine learning workflow is a semantic segmnatation network, whose job is to classify every pixel of an input motion blue microscopy into one of two categories, background, or adhered.
+
 * [Extract Video Frames](/Training_Material/Extract_Video_Frames/)
   The code in this sub-directory is a helper code, which can extract individual frames from a motion blur microscopy video. This process is useful if readers want to use frames from a video as training images for the phase one network.
   - Input:
@@ -54,7 +56,12 @@ When you enter the [Training_Material](/Training_Material/) directory, you will 
 
 ### Phase 2 Code/Data
 
-* []
+* [Extract Phase Two Regions](/Training_Material/Extract_Phase_Two_Regions/)
+
+
+* [Create Train Split](/Training_Material/Create_Train_Split_Phase_Two/)
+
+* [Train Phase Two](/Training_Material/Train_Phase_Two/)
 
 
 ## Analysis Code/Data Navigation

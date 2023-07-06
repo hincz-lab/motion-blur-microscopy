@@ -41,17 +41,30 @@ Phase 1 of the machine learning workflow is a semantic segmnatation network, who
     A fully colored mask, where the "adhered" regions of the original image are colored the same as the input, and the rest of the pixels in the image are colored in black for "background".
 
 * [Label And Layer Masks](/Training_Material/Label_And_Layer_Masks/)
-  The code in this sub-directory will convert the completed colored masks into integer labeled regions. On top of this, the code will convert the labeled regions into layered one-hot labeled regions.
+  The code in this sub-directory will convert the completed colored masks into label encoded regions. On top of this, the code will convert the label encoded regions into layered one-hot encoded regions.
 
   - Input:
     Fully colored masks.
   - Output:
-    Integer labeled masks by category. As an example, 0 = Background, 1 = Adhered. Also, layered one-hot labeled masks.
+     Label encoded masks. Also, layered one-hot encoded masks.
 
 * [Split Into Tiles](/Training_Material/Split_Into_Tiles/)
-  The phase one network takes in as an input regions of a specific size, specifically, 128x128 pixels. The code here generates these sized tiles from our input images/masks/one-hot labels by first splitting each image into 150x150 pixel size chunks, and then rescaling to 128x128.
+  The phase one network takes in as an input regions of a specific size, specifically, 128x128 pixels. The code here generates these sized tiles from our input images/colored masks/label encoded masks/one-hot encoded masks by first splitting each image into 150x150 pixel size chunks, and then rescaling to 128x128.
+
+- Input:
+  Original images, colored masks, label encoded masks, and one-hot encoded masks.
+- Output
+  All of the input images/masks split into 150x150 pixel tiles and 128x128 pixel tiles.
+
 
 * [Train Phase One](/Training_Material/Train_Phase_One)
+  Here we actually train the phase one segmentation network. The network architecture is inspired by U-Net, and the Hinczewski Lab's previous work.
+
+  - Input:
+    Original image tiles, as well as one-hot encoded mask tiles of size 128x128 pixels.
+
+  - Output:
+    A trained network, as a .h5 file, which includes the network architecture and the associated weights, all in one.
 
 
 ### Phase 2 Code/Data

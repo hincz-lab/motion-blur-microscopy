@@ -4,10 +4,10 @@
 
 ## Table of Contents
 1. [Introduction](#introduction)
-2. [Training Code/Data navigation](#training-codedata-navigation)
+2. [Training Code/Data Navigation](#training-codedata-navigation)
    * [Phase 1 Code/Data](#phase-1-codedata)
    * [Phase 2 Code/Data](#phase-2-codedata)
-3. 
+3. [Analysis Code/Data Navigation](#analysis-codedata-navigation)
 
 ## Introduction
 
@@ -56,21 +56,18 @@ Phase 1 of the machine learning workflow is a semantic segmnatation network, who
 - Output
   All of the input images/masks split into 150x150 pixel tiles and 128x128 pixel tiles.
 
-
 * [Train Phase One](/Training_Material/Train_Phase_One)
   Here we actually train the phase one segmentation network. The network architecture is inspired by U-Net, and the Hinczewski Lab's previous work.
 
   - Input:
     Original image tiles, as well as one-hot encoded mask tiles of size 128x128 pixels.
-
   - Output:
     A trained network, as a .h5 file, which includes the network architecture and the associated weights, all in one.
-
 
 ### Phase 2 Code/Data
 
 * [Extract Phase Two Regions](/Training_Material/Extract_Phase_Two_Regions/)
-
+  In this sub-directory, you will find code which takes regions identified by the phase one segmentation network as adhered, and extracts a 20x20 pixel square centered on the adhered region.
 
 * [Create Train Split](/Training_Material/Create_Train_Split_Phase_Two/)
 

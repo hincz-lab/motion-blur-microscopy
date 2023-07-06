@@ -3,10 +3,10 @@
 **This README file is currently under construction.
 
 ## Table of Contents
-1. [Introduction](##introduction)
-2. [Training Code/Data navigation](##training-codedata-navigation)
-   * [Phase 1 Code/Data](###phase-1-codedata)
-   * [Phase 2 Code/Data](###phase-2-codedata)
+1. [Introduction](#introduction)
+2. [Training Code/Data navigation](#training-codedata-navigation)
+   * [Phase 1 Code/Data](#phase-1-codedata)
+   * [Phase 2 Code/Data](#phase-2-codedata)
 3. 
 
 ## Introduction

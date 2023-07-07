@@ -83,9 +83,9 @@ The code in this section of the readme is used to take raw inputs, with the trai
 * [Count Cells](/Analysis_Material/Count_Cells/)
 
 
-- Input:
-
-- Output:
+  - Input:
+  
+  - Output:
 
 * [Video Analysis](/Analysis_Material/Video_Analysis/)
 
@@ -99,48 +99,48 @@ The code in this section is used to take data generated from raw inputs and crea
 
 * [Create Hexplots](/Analysis_Material/Create_Hexplots/)
 
-- Input:
-
-- Output:
+  - Input:
+  
+  - Output:
 
 * [Create Reproducibility Plots](/Analysis_Material/Create_Reproducibility_Plots/)
 
-- Input:
-
-- Output:
+  - Input:
+  
+  - Output:
 
 * [Create R Squared Plots](/Analysis_Material/Create_R_Squared_Plots/)
 
-- Input:
-
-- Output:
+  - Input:
+  
+  - Output:
 
 * [Create R Squared Plots With Groupings](/Analysis_Material/Create_R_Squared_Plots_With_Groupings/)
 
-- Input:
-
-- Output:
+  - Input:
+  
+  - Output:
 
 * [Create Adhesion Time Probability Plots](/Analysis_Material/Create_Adhesion_Time_Probability_Plots/)
 
-- Input:
-
-- Output:
+  - Input:
+  
+  - Output:
 
 * [Create Eccentricity Vs Adhesion Time Plot](/Analysis_Material/Create_Eccentricity_Vs_Adhesion_Time_Plot/)
 
-- Input:
-
-- Output:
+  - Input:
+  
+  - Output:
 
 * [Create Average Velocity Plots](/Analysis_Material/Create_Average_Velocity_Plots/)
 
-- Input:
-
-- Output:
+  - Input:
+  
+  - Output:
 
 * [Complete F1 Analysis](/Analysis_Material/Create_F1_Plot/)
 
-- Input:
-
-- Output:
+  - Input:
+  
+  - Output:

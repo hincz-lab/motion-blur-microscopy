@@ -53,7 +53,7 @@ Phase 1 of the machine learning workflow is a semantic segmnatation network, who
 
 - Input:
   Original images, colored masks, label encoded masks, and one-hot encoded masks.
-- Output
+- Output:
   All of the input images/masks split into 150x150 pixel tiles and 128x128 pixel tiles.
 
 * [Train Phase One](/Training_Material/Train_Phase_One)
@@ -75,3 +75,72 @@ Phase 1 of the machine learning workflow is a semantic segmnatation network, who
 
 
 ## Analysis Code/Data Navigation
+When you enter the [Analysis Material](/Analysis_Material/) directory, you will notice many subdirectories. The idea here, just as with the training material directory, is to decompose all of the analysis code and data into smaller chunks more easily understandeable for a reader. In each subdirectory, you will notice a Jupyter notebook script, as well as sub-subdirectories, which contain inputs and outputs that we used/generated in our work. The official "order" to run the code in is as follows:
+
+### Results Generation
+The code in this section of the readme is used to take raw inputs, with the trained machine learning networks, and generate data from them. These results might be counts of cells, or morphological features for static images, or dynamic quantities in the case of videos.
+
+* [Count Cells](/Analysis_Material/Count_Cells/)
+
+
+- Input:
+
+- Output:
+
+* [Video Analysis](/Analysis_Material/Video_Analysis/)
+
+  - Input:
+ 
+  - Output:
+
+
+### Results Analysis
+The code in this section is used to take data generated from raw inputs and create plots, tables, or any other sort of important representation of the results for the paper.
+
+* [Create Hexplots](/Analysis_Material/Create_Hexplots/)
+
+- Input:
+
+- Output:
+
+* [Create Reproducibility Plots](/Analysis_Material/Create_Reproducibility_Plots/)
+
+- Input:
+
+- Output:
+
+* [Create R Squared Plots](/Analysis_Material/Create_R_Squared_Plots/)
+
+- Input:
+
+- Output:
+
+* [Create R Squared Plots With Groupings](/Analysis_Material/Create_R_Squared_Plots_With_Groupings/)
+
+- Input:
+
+- Output:
+
+* [Create Adhesion Time Probability Plots](/Analysis_Material/Create_Adhesion_Time_Probability_Plots/)
+
+- Input:
+
+- Output:
+
+* [Create Eccentricity Vs Adhesion Time Plot](/Analysis_Material/Create_Eccentricity_Vs_Adhesion_Time_Plot/)
+
+- Input:
+
+- Output:
+
+* [Create Average Velocity Plots](/Analysis_Material/Create_Average_Velocity_Plots/)
+
+- Input:
+
+- Output:
+
+* [Complete F1 Analysis](/Analysis_Material/Create_F1_Plot/)
+
+- Input:
+
+- Output:

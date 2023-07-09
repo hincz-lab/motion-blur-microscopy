@@ -54,6 +54,14 @@ Phase 1 of the machine learning workflow is a semantic segmnatation network, who
   - Output:
      Label encoded masks. Also, layered one-hot encoded masks.
 
+  This code was last run without errors with the following library versions:
+
+  - python 3.19.15
+  - matplotlib 3.6.2
+  - numpy 1.23.4
+  - tensorflow 2.10.0
+  - keras 2.10.0
+
 * [Split Into Tiles](/Training_Material/Split_Into_Tiles/)
   The phase one network takes in as an input regions of a specific size, specifically, 128x128 pixels. The code here generates these sized tiles from our input images/colored masks/label encoded masks/one-hot encoded masks by first splitting each image into 150x150 pixel size chunks, and then rescaling to 128x128.
 

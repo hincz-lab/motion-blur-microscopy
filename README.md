@@ -70,6 +70,13 @@ Phase 1 of the machine learning workflow is a semantic segmnatation network, who
 - Output:
   All of the input images/masks split into 150x150 pixel tiles and 128x128 pixel tiles.
 
+  This code was last run without errors with the following library versions:
+
+  - python 3.19.15
+  - matplotlib 3.6.2
+  - numpy 1.23.4
+  - opencv 4.6.0
+
 * [Train Phase One](/Training_Material/Train_Phase_One)
   Here we actually train the phase one segmentation network. The network architecture is inspired by U-Net, and the Hinczewski Lab's previous work.
 

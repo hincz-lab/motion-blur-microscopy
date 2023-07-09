@@ -40,6 +40,12 @@ Phase 1 of the machine learning workflow is a semantic segmnatation network, who
   - Output:
     A fully colored mask, where the "adhered" regions of the original image are colored the same as the input, and the rest of the pixels in the image are colored in black for "background".
 
+  This code was last run without errors with the following library versions:
+
+  - python 3.9.15
+  - matplotlib 3.6.2
+  - numpy 1.23.4
+
 * [Label And Layer Masks](/Training_Material/Label_And_Layer_Masks/)
   The code in this sub-directory will convert the completed colored masks into label encoded regions. On top of this, the code will convert the label encoded regions into layered one-hot encoded regions.
 

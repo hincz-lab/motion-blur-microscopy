@@ -85,6 +85,16 @@ Phase 1 of the machine learning workflow is a semantic segmnatation network, who
   - Output:
     A trained network, as a .h5 file, which includes the network architecture and the associated weights, all in one.
 
+  This code was last run without errors with the following library versions:
+
+  - python 3.19.15
+  - matplotlib 3.6.2
+  - numpy 1.23.4
+  - opencv 4.6.0
+  - tensorflow 2.10.0
+  - keras 2.10.0
+  - pandas 1.5.2
+
 ### Phase 2 Code/Data
 
 * [Extract Phase Two Regions](/Training_Material/Extract_Phase_Two_Regions/)

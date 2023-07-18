@@ -115,10 +115,33 @@ Phase 1 of the machine learning workflow is a semantic segmnatation network, who
   - scikit-image 0.18.1
   - scipy 1.9.3
 
-* [Create Train Split](/Training_Material/Create_Train_Split_Phase_Two/)
+* [Create Train Split](/Training_Material/Create_Train_Split_Phase_Two/) In this sub-directory, you will find code which splits manually labeled cells into a training set, validation set, and testing set. The splits can be adjusted as the user wants.
 
-* [Train Phase Two](/Training_Material/Train_Phase_Two/)
+  - Input:
+     Manually classified images of regions identified as "adshered" by the phase one network of size 40x40 pixels.
+    
+  - Output:
+    The input images will be split into a training set, validation set, and testing set, used for training the phase 2 network.
 
+  This code was last run without errors with the following library versions.
+
+  - python 3.19.15
+  - matplotlib 3.6.2
+  - numpy 1.23.4
+
+* [Train Phase Two](/Training_Material/Train_Phase_Two/) In this sub-directory, you will find code which will use transfer learning to train a VGG16 network architecture with weights pre-trained on imagenet to classify cell types from one another.
+
+  - Input:
+    Manually classified regions identified from the phase one network split into training and validation sets.
+
+  - Output:
+    A trained VGG16 network, which can be used to classify adhered regions identified by the phase one segmantation network.
+
+  This code was last run without errors with the following library versions.
+
+  - python 3.19.15
+  - tensorflow 2.10.0
+  - keras 2.10.0
 
 ## Analysis Code/Data Navigation
 When you enter the [Analysis Material](/Analysis_Material/) directory, you will notice many subdirectories. The idea here, just as with the training material directory, is to decompose all of the analysis code and data into smaller chunks more easily understandeable for a reader. In each subdirectory, you will notice a Jupyter notebook script, as well as sub-subdirectories, which contain inputs and outputs that we used/generated in our work. The official "order" to run the code in is as follows:

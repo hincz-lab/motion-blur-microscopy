@@ -98,7 +98,22 @@ Phase 1 of the machine learning workflow is a semantic segmnatation network, who
 ### Phase 2 Code/Data
 
 * [Extract Phase Two Regions](/Training_Material/Extract_Phase_Two_Regions/)
-  In this sub-directory, you will find code which takes regions identified by the phase one segmentation network as adhered, and extracts a 20x20 pixel square centered on the adhered region.
+  In this sub-directory, you will find code which takes regions identified by the phase one segmentation network as adhered, and extracts a 20x20 pixel square centered on the adhered region. These regions will need to be manually classified by cell type by the user for use in the phase 2 network training. The purpose of this code is to speed up the process of identifying regions from the phase one network to be manually classified. In our analysis, we rescale the color of the inputs.
+
+  - Input:
+      Raw MBM images or frames from MBM videos.
+  - Output:
+      20x20 pixel regions corresponding to areas of the raw images or frames classified as "adhered" by the phase one network.
+
+  This code was last run without errors with the following library versions:
+
+  - python 3.19.15
+  - matplotlib 3.6.2
+  - numpy 1.23.4
+  - opencv 4.6.0
+  - tensorflow 2.10.0
+  - scikit-image 0.18.1
+  - scipy 1.9.3
 
 * [Create Train Split](/Training_Material/Create_Train_Split_Phase_Two/)
 

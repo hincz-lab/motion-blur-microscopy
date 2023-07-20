@@ -208,6 +208,18 @@ The code in this section of the readme is used to take raw inputs, with the trai
   - Output:
 
 
+* [Transform Tracks Into Dynamic Data](/Analyis_Material/Transofrm_Tracks_Into_Dynamic_Data/) The code in this sub-directory will take tracks generated from the the video analysis of MBM videos and transform the data into dynamics data.
+
+  - Input: The input to the code will be tracks data generated from the video analysis of MBM videos.
+ 
+  - Output: The output of the code will be dynamics data, which can be more easily used to generate results.
+ 
+    This code was last run without errors with the following library versions:
+
+    - python 3.9.1.5
+    - numpy 1.23.4
+    - pandas 1.5.2
+
 ### Results Analysis
 The code in this section is used to take data generated from raw inputs and create plots, tables, or any other sort of important representation of the results for the paper.
 
@@ -306,8 +318,14 @@ The code in this section is used to take data generated from raw inputs and crea
     - pandas 1.5.2
     - scipy 1.9.3
 
-* [Create F1 Plot](/Analysis_Material/Create_F1_Plot/)
+* [Create F1 Plot](/Analysis_Material/Create_F1_Plot/) The script in this sub-directory can be used to generate an F1 plot for various confidence thresholds.
 
-  - Input:
+  - Input: The input for the script is a .csv file containing F1 values for various confidence thresholds.
   
-  - Output:
+  - Output: The output of the script is a plot of F1 score vs. confidence threshold.
+ 
+    This code was last run without errors with the following library versions:
+
+    - python 3.9.15
+    - matplotlib 3.6.2
+    - numpy 1.23.4

@@ -310,13 +310,26 @@ The code in this section is used to take data generated from raw inputs and crea
   
   - Output: The output of the script are four plots. With flow average velocity probability plot, cross flow average velocity probability plot, with flow average velocity vs. adhesion time plot, and cross flow average velocity vs. adhesion time plot.
 
-    This code was last run without errors with the following library version:
+    This code was last run without errors with the following library versions:
 
     - python 3.9.15
     - matplotlib 3.6.2
     - numpy 1.23.4
     - pandas 1.5.2
     - scipy 1.9.3
+   
+*[Create Velocity Distribution And Track Plots](/Analysis_Material/Create_Velocity_Distribution_And_Tracks_Plot/) The script in this sub-directory can be used to generate colored velocity distribution plots and also track plots, which show various adhesion event trajectories of MBM videos.
+
+  - Input: The input for the script is a .csv file containing track data for each adhesion event in an MBM video.
+
+  - Output: The output of the script is a colored with flow average velocity plot distribution, as well as a tracks plot, showing trajectories of adhesion events.
+
+    This code was last run without errors with the following library versions:
+
+    - python 3.9.15
+    - matplotlib 3.6.2
+    - numpy 1.23.4
+    - pandas 1.5.2
 
 * [Create F1 Plot](/Analysis_Material/Create_F1_Plot/) The script in this sub-directory can be used to generate an F1 plot for various confidence thresholds.
 

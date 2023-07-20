@@ -292,11 +292,19 @@ The code in this section is used to take data generated from raw inputs and crea
     - pandas 1.5.2
     - statsmodels 0.13.5
 
-* [Create Average Velocity Plots](/Analysis_Material/Create_Average_Velocity_Plots/)
+* [Create Average Velocity Plots](/Analysis_Material/Create_Average_Velocity_Plots/) The script in this sub-directory can be used to generate a variety of average velocity plots. In particular, the user can generate with flow and cross flow average velocity probability plots, as well as with flow vs. adhesion time and cross flow vs. adhesion time plots.
 
-  - Input:
+  - Input: The input for the script is a .csv file with dynamics data of MBM videos.
   
-  - Output:
+  - Output: The output of the script are four plots. With flow average velocity probability plot, cross flow average velocity probability plot, with flow average velocity vs. adhesion time plot, and cross flow average velocity vs. adhesion time plot.
+
+    This code was last run without errors with the following library version:
+
+    - python 3.9.15
+    - matplotlib 3.6.2
+    - numpy 1.23.4
+    - pandas 1.5.2
+    - scipy 1.9.3
 
 * [Create F1 Plot](/Analysis_Material/Create_F1_Plot/)
 

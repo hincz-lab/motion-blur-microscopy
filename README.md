@@ -166,9 +166,6 @@ The code in this section of the readme is used to take raw inputs, with the trai
     - tensorflow 2.10.0
     - scipy 1.9.3
     - scikit-image 0.18.1
-   
-    *Note for reader: We encountered issues in this code with multiple instances of libiomp5.dll in our virtual environment, be careful of this issue if your kernel dies for seemingly no reason.
-
 
 * [Count Cells](/Analysis_Material/Count_Cells/) This sub-directory will have two relevant scripts. One of the scripts can be used to count cells for input MBM images or MBM frames using a size threshold. The second script can be used to count cells for input MBM images or MBM frames using a phase 2 classification network.
 
@@ -190,11 +187,19 @@ The code in this section of the readme is used to take raw inputs, with the trai
     - scikit-image 0.18.1
     - pandas 1.5.2
    
-* [Complete F1 Analysis](/Analysis_Material/Create_F1_Plot/)
+* [Complete F1 Analysis](/Analysis_Material/Create_F1_Plot/) The code in this sub-directory can be used to complete an F1 analysis for the phase two classification network.
 
-  - Input:
+  - Input: The input will be "adhered" regions identified by the phase one segmentation network that were NOT used in the training or validation of the phase 2 classification network.
   
-  - Output:
+  - Output: The output will be three .npy numpy arrays containing the precision, recall, and F1 score values for a range of confidence thresholds.
+ 
+    This code was last run without errors with the following library versions:
+
+    - python 3.9.15
+    - matplotlib 3.6.2
+    - numpy 1.23.4
+    - opencv 4.6.0
+    - tensorflow 2.10.0
 
 * [Video Analysis](/Analysis_Material/Video_Analysis/)
 

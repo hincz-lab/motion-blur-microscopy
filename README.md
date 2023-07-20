@@ -219,13 +219,23 @@ The code in this section is used to take data generated from raw inputs and crea
  
     This code was last run without errors with the following library versions:
 
-    
+    - python 3.9.15
+    - matplotlib 3.6.2
+    - numpy 1.23.4
+    - pandas 1.5.2
 
 * [Create Reproducibility Plots](/Analysis_Material/Create_Reproducibility_Plots/) The code in this sub-directory can create inter- and intra-reproducibility plots.
 
-  - Input: A .csv files containing counts generated from two different experimenters at different times of an MBM experiment.
+  - Input: A .csv file containing counts generated from two different experimenters at different times of an MBM experiment.
   
   - Output: Two plots, one for inter-reproducibility, and another for intra-reproducibility.
+ 
+    This code was last run without errors with the following library versions:
+
+    - python 3.9.15
+    - matplotlib 3.6.2
+    - numpy 1.23.4
+    - pandas 1.5.2
 
 * [Create R Squared Plots](/Analysis_Material/Create_R_Squared_Plots/)
 

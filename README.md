@@ -26,13 +26,6 @@ When you enter the [Training_Material](/Training_Material/) directory, you will 
 
 Phase 1 of the machine learning workflow is a semantic segmnatation network, whose job is to classify every pixel of an input motion blue microscopy into one of two categories, background, or adhered.
 
-* [Extract Video Frames](/Training_Material/Extract_Video_Frames/)
-  The code in this sub-directory is a helper code, which can extract individual frames from a motion blur microscopy video. This process is useful if readers want to use frames from a video as training images for the phase one network.
-  - Input:
-    A motion blur microscopy video.
-  - Output:
-    Individual frames from the input video.
-
 * [Complete Mask Coloring](/Training_Material/Complete_Mask_Coloring/)
   As a starting point, a training image(s), or frame(s) from a training video, should be manually colored. The user should color over all of the "adhered" regions of the training images, and leave the rest of the image untouched. We personally labeled our images using the software [Gimp](https://www.gimp.org/). The code in this sub-directory will take an image, or images labeled in this way and fill all non-colored regions as background, which is noted by the color black [0,0,0] (RGB).
   - Input:

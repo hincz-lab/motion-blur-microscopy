@@ -56,7 +56,7 @@ Phase 1 of the machine learning workflow is a semantic segmnatation network, who
 
   This code was last run without errors with the following library versions:
 
-  - python 3.19.15
+  - python 3.9.15
   - matplotlib 3.6.2
   - numpy 1.23.4
   - tensorflow 2.10.0
@@ -72,7 +72,7 @@ Phase 1 of the machine learning workflow is a semantic segmnatation network, who
 
   This code was last run without errors with the following library versions:
 
-  - python 3.19.15
+  - python 3.9.15
   - matplotlib 3.6.2
   - numpy 1.23.4
   - opencv 4.6.0
@@ -87,7 +87,7 @@ Phase 1 of the machine learning workflow is a semantic segmnatation network, who
 
   This code was last run without errors with the following library versions:
 
-  - python 3.19.15
+  - python 3.9.15
   - matplotlib 3.6.2
   - numpy 1.23.4
   - opencv 4.6.0
@@ -107,7 +107,7 @@ Phase 1 of the machine learning workflow is a semantic segmnatation network, who
 
   This code was last run without errors with the following library versions:
 
-  - python 3.19.15
+  - python 3.9.15
   - matplotlib 3.6.2
   - numpy 1.23.4
   - opencv 4.6.0
@@ -125,7 +125,7 @@ Phase 1 of the machine learning workflow is a semantic segmnatation network, who
 
   This code was last run without errors with the following library versions.
 
-  - python 3.19.15
+  - python 3.9.15
   - matplotlib 3.6.2
   - numpy 1.23.4
 
@@ -139,7 +139,7 @@ Phase 1 of the machine learning workflow is a semantic segmnatation network, who
 
   This code was last run without errors with the following library versions.
 
-  - python 3.19.15
+  - python 3.9.15
   - tensorflow 2.10.0
   - keras 2.10.0
 
@@ -159,7 +159,7 @@ The code in this section of the readme is used to take raw inputs, with the trai
 
     These codes were last run without errors with the following library versions:
 
-    - python 3.19.15
+    - python 3.9.15
     - matplotlib 3.6.2
     - numpy 1.23.4
     - opencv 4.6.0
@@ -168,6 +168,19 @@ The code in this section of the readme is used to take raw inputs, with the trai
     - scipy 1.9.3
     - scikit-image 0.18.1
     - pandas 1.5.2
+
+* [Extract Morphological Features](/Analysis_Material/Extract_Morphological_Features/). This sub-directory will have two relevant scripts. One of the scripts can be used to extract morphological features (size, eccentricity) of regions classified as "adhered" by the phase 1 network, whereas the second script can be used to extract morphological features (size, eccentricity) of regions classified as "adhered" by the phase 1 network where input images are color adjusted.
+
+  - Input:
+    Raw MBM images or MBM video frames.
+
+  - Output:
+    Two .npy numpy arrays containing all of the region sizes and eccentricities.
+
+    These codes were last run without errors with the following library versions:
+
+    - python 3.9.15
+
 
 * [Video Analysis](/Analysis_Material/Video_Analysis/)
 

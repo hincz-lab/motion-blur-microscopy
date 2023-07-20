@@ -278,11 +278,19 @@ The code in this section is used to take data generated from raw inputs and crea
     - numpy 1.23.4
     - pandas 1.5.2
 
-* [Create Eccentricity Vs Adhesion Time Plot](/Analysis_Material/Create_Eccentricity_Vs_Adhesion_Time_Plot/)
+* [Create Eccentricity Vs Adhesion Time Plot](/Analysis_Material/Create_Eccentricity_Vs_Adhesion_Time_Plot/) The script in this sub-directory can be used to generate eccentricity vs. adhesion time plots.
 
-  - Input:
+  - Input: The input here is a .csv file with dynamics data of MBM videos.
   
-  - Output:
+  - Output: The output of the script is an eccentricity vs. adhesion time plot.
+ 
+    This code was last run without errors with the following library versions:
+
+    - python 3.9.15
+    - matplotlib 3.6.2
+    - numpy 1.23.4
+    - pandas 1.5.2
+    - statsmodels 0.13.5
 
 * [Create Average Velocity Plots](/Analysis_Material/Create_Average_Velocity_Plots/)
 

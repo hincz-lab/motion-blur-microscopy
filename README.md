@@ -306,8 +306,14 @@ The code in this section is used to take data generated from raw inputs and crea
     - pandas 1.5.2
     - scipy 1.9.3
 
-* [Create F1 Plot](/Analysis_Material/Create_F1_Plot/)
+* [Create F1 Plot](/Analysis_Material/Create_F1_Plot/) The script in this sub-directory can be used to generate an F1 plot for various confidence thresholds.
 
-  - Input:
+  - Input: The input for the script is a .csv file containing F1 values for various confidence thresholds.
   
-  - Output:
+  - Output: The output of the script is a plot of F1 score vs. confidence threshold.
+ 
+    This code was last run without errors with the following library versions:
+
+    - python 3.9.15
+    - matplotlib 3.6.2
+    - numpy 1.23.4

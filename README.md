@@ -149,6 +149,27 @@ When you enter the [Analysis Material](/Analysis_Material/) directory, you will 
 ### Results Generation
 The code in this section of the readme is used to take raw inputs, with the trained machine learning networks, and generate data from them. These results might be counts of cells, or morphological features for static images, or dynamic quantities in the case of videos.
 
+* [Extract Morphological Features](/Analysis_Material/Extract_Morphological_Features/). This sub-directory will have two relevant scripts. One of the scripts can be used to extract morphological features (size, eccentricity) of regions classified as "adhered" by the phase 1 network, whereas the second script can be used to extract morphological features (size, eccentricity) of regions classified as "adhered" by the phase 1 network where input images are color adjusted.
+
+  - Input:
+    Raw MBM images or MBM video frames.
+
+  - Output:
+    Two .npy numpy arrays containing all of the region sizes and eccentricities.
+
+    These codes were last run without errors with the following library versions:
+
+    - python 3.9.15
+    - matplotlib 3.6.2
+    - numpy 1.23.4
+    - opencv 4.6.0
+    - tensorflow 2.10.0
+    - scipy 1.9.3
+    - scikit-image 0.18.1
+   
+    *Note for reader: We encountered issues in this code with multiple instances of libiomp5.dll in our virtual environment, be careful of this issue if your kernel dies for seemingly no reason.
+
+
 * [Count Cells](/Analysis_Material/Count_Cells/) This sub-directory will have two relevant scripts. One of the scripts can be used to count cells for input MBM images or MBM frames using a size threshold. The second script can be used to count cells for input MBM images or MBM frames using a phase 2 classification network.
 
   - Input:
@@ -168,19 +189,12 @@ The code in this section of the readme is used to take raw inputs, with the trai
     - scipy 1.9.3
     - scikit-image 0.18.1
     - pandas 1.5.2
-
-* [Extract Morphological Features](/Analysis_Material/Extract_Morphological_Features/). This sub-directory will have two relevant scripts. One of the scripts can be used to extract morphological features (size, eccentricity) of regions classified as "adhered" by the phase 1 network, whereas the second script can be used to extract morphological features (size, eccentricity) of regions classified as "adhered" by the phase 1 network where input images are color adjusted.
+   
+* [Complete F1 Analysis](/Analysis_Material/Create_F1_Plot/)
 
   - Input:
-    Raw MBM images or MBM video frames.
-
+  
   - Output:
-    Two .npy numpy arrays containing all of the region sizes and eccentricities.
-
-    These codes were last run without errors with the following library versions:
-
-    - python 3.9.15
-
 
 * [Video Analysis](/Analysis_Material/Video_Analysis/)
 
@@ -192,17 +206,21 @@ The code in this section of the readme is used to take raw inputs, with the trai
 ### Results Analysis
 The code in this section is used to take data generated from raw inputs and create plots, tables, or any other sort of important representation of the results for the paper.
 
-* [Create Hexplots](/Analysis_Material/Create_Hexplots/)
+* [Create Hexplots](/Analysis_Material/Create_Hexplots/) This sub-directory will have code which will convert input region areas and eccentricities into a hexplot.
 
-  - Input:
+  - Input: Areas and eccentricities of regions identified by the phase 1 segmentation network as "adhered".
   
-  - Output:
+  - Output: A hexplot of the region areas and eccentricities.
+ 
+    This code was last run without errors with the following library versions:
 
-* [Create Reproducibility Plots](/Analysis_Material/Create_Reproducibility_Plots/)
+    
 
-  - Input:
+* [Create Reproducibility Plots](/Analysis_Material/Create_Reproducibility_Plots/) The code in this sub-directory can create inter- and intra-reproducibility plots.
+
+  - Input: A .csv files containing counts generated from two different experimenters at different times of an MBM experiment.
   
-  - Output:
+  - Output: Two plots, one for inter-reproducibility, and another for intra-reproducibility.
 
 * [Create R Squared Plots](/Analysis_Material/Create_R_Squared_Plots/)
 
@@ -234,7 +252,7 @@ The code in this section is used to take data generated from raw inputs and crea
   
   - Output:
 
-* [Complete F1 Analysis](/Analysis_Material/Create_F1_Plot/)
+* [Create F1 Plot](/Analysis_Material/Create_F1_Plot/)
 
   - Input:
   

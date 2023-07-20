@@ -18,6 +18,22 @@ Hello, and welcome to the Github page which houses the code and data used for th
 
 Code and data for the two larger categories can be found in the [Training_Material](/Training_Material/) and [Analysis_Material](/Analysis_Material) directories respectively. The following sections will guide readers on how to navigate both categories.
 
+The most recent stable versions of libraries which can be used to run all of the code are as follows:
+
+- python 3.9.15
+- matplotlib 3.6.2
+- numpy 1.23.4
+- tensorflow 2.10.0
+- keras 2.10.0
+- opencv 4.6.0
+- pandas 1.5.2
+- scikit-image 0.18.1
+- scipy 1.9.3
+- scikit-learn 1.2.2
+- statsmodels 0.13.5
+
+But stable versions for each particular chunk of code are also listed if you are only interested in running bits of the code at a time.
+
 ## Training Code/Data Navigation
 
 When you enter the [Training_Material](/Training_Material/) directory, you will notice many sub-directories. The idea here is that we want to decompose the training process into pieces that are more accessible to the community. In each sub-directory, there will be a corresponding Jupyter notebook, as well as sub-sub-directories, which contain inputs to the code and outputs from the code that were used and produced in our work. The "official" order of sub-directories to be followed (with descriptions) is as follows:

@@ -237,17 +237,33 @@ The code in this section is used to take data generated from raw inputs and crea
     - numpy 1.23.4
     - pandas 1.5.2
 
-* [Create R Squared Plots](/Analysis_Material/Create_R_Squared_Plots/)
+* [Create R Squared Plots](/Analysis_Material/Create_R_Squared_Plots/) The code in this sub-directory can be used to generate R-Squared comparison plots between manual and automated counts.
 
-  - Input:
+  - Input: The inputs are two .csv files, one containing manual counts, and the other containing automated counts, for a variety of input MBM images or MBM video frames.
   
-  - Output:
+  - Output: The output is a plot which compares the automated and manual counts, with a reported r-squared, which describes how closely the two datasets are.
+ 
+    This code was last run without errors with the following library versions:
 
-* [Create R Squared Plots With Groupings](/Analysis_Material/Create_R_Squared_Plots_With_Groupings/)
+    - python 3.9.15
+    - matplotlib 3.6.2
+    - numpy 1.23.4
+    - pandas 1.5.2
+    - scikit-learn 1.2.2
 
-  - Input:
+* [Create R Squared Plots With Groupings](/Analysis_Material/Create_R_Squared_Plots_With_Groupings/) The code in this sub-directory can be used to generate R-Squared comparison plots between aggregated manual and aggregated automated counts.
+
+  - Input: The inputs are two .csv files, one containing manual counts, and the other containing automated counts, for a variety of input MBM images or MBM video frames.
   
-  - Output:
+  - Output: The output is a plot which compares the aggregated automated and aggregated manual counts, with a reported r-squared, which describes how closely the two datasets are.
+ 
+    This code was last run without errors with the following library versions:
+
+    - python 3.9.15
+    - matplotlib 3.6.2
+    - numpy 1.23.4
+    - pandas 1.5.2
+    - scikit-learn 1.2.2
 
 * [Create Adhesion Time Probability Plots](/Analysis_Material/Create_Adhesion_Time_Probability_Plots/)
 

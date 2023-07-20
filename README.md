@@ -265,11 +265,18 @@ The code in this section is used to take data generated from raw inputs and crea
     - pandas 1.5.2
     - scikit-learn 1.2.2
 
-* [Create Adhesion Time Probability Plots](/Analysis_Material/Create_Adhesion_Time_Probability_Plots/)
+* [Create Adhesion Time Probability Plots](/Analysis_Material/Create_Adhesion_Time_Probability_Plots/) The script in this sub-directory can be used to generate adhesion time probability plots. 
 
-  - Input:
+  - Input: The input here is a .csv file with dynamics data of MBM videos.
   
-  - Output:
+  - Output: The output of the script is an adhesion time probability plot.
+ 
+    This code was last run without errors with the following library versions:
+
+    - python 3.9.15
+    - matplotlib 3.6.2
+    - numpy 1.23.4
+    - pandas 1.5.2
 
 * [Create Eccentricity Vs Adhesion Time Plot](/Analysis_Material/Create_Eccentricity_Vs_Adhesion_Time_Plot/)
 

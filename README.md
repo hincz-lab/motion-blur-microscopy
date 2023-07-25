@@ -212,9 +212,28 @@ The code in this section of the readme is used to take raw inputs, with the trai
 
 * [Video Analysis](/Analysis_Material/Video_Analysis/)
 
-  - Input:
- 
-  - Output:
+The requirements should be installed for local use:
+```
+pip install -r  Analysis_Material/Video_Analysis/requirements.txt
+```
+
+- Input: The Phase 1 model path in H5 format, video path in AVI or MP4, the cell type ("srbc", "cart", or "custom"), and whether or not to automatically take the convex hull of all regions found in segmentation ('y' or 'n').
+OPTIONAL: the range of frames to analyze (this can be greater than the total frames, it will just stop analysis once all frames have been processed), and if a custom threshold is desired, the thresholds as: [minimum area to consider],[minimum area to begin adhesion event],[number of frames a cell may "disappear"].
+
+VALID ARGUMENTS: If arguments are invalid, the program will either raise a warning or interrupt the process.
+
+To run this process in the command line, use the following format (once again, frames_range and custom_thresh are optional parameters and they may be excluded)
+```
+python Analysis_Material/Video_Analysis/MBM_videprocessing.py model='model.h5' video_path='video_path.avi' celltype='cart' autoconvex='n' frames_range=1,10000 custom_thresh=40,40,10
+```
+
+There is also a Colab version of the file **Analysis_Material/Video_Analysis/MBM_videoprocessing_colab.ipynb** that has the user select these inputs. This is recommended if someone would like to run analysis without installing anything and has less of a learning curve. Downside: less RAM available (you may have to process a long video in segments, hence defining the frames_range parameter).
+To use this code, navigate to the file on GitHub (here), click "Open in Colab" at the top of the page, and you should be able to run the program.
+
+- Output: By running either the Colab or local file, two CSV files will be produced:
+
+	- The 'static' file: *video_filename*_static.csv allows user to explore frame-by-frame cell properties
+	- the 'dynamic' file: *video_filename*_dynamic.csv gives an overview of each cell's behavior
 
 
 * [Transform Tracks Into Dynamic Data](/Analyis_Material/Transofrm_Tracks_Into_Dynamic_Data/) The code in this sub-directory will take tracks generated from the the video analysis of MBM videos and transform the data into dynamics data.

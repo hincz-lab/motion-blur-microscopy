@@ -212,15 +212,15 @@ The code in this section of the readme is used to take raw inputs, with the trai
 
 * [Video Analysis](/Analysis_Material/Video_Analysis/)
 
-The requirements should be installed for local use:
-```
-pip install -r  Analysis_Material/Video_Analysis/requirements.txt
-```
-
   - Input: The Phase 1 model path in H5 format, video path in AVI or MP4, the cell type ("srbc", "cart", or "custom"), and whether or not to automatically take the convex hull of all regions found in segmentation ('y' or 'n').
 OPTIONAL: the range of frames to analyze (this can be greater than the total frames, it will just stop analysis once all frames have been processed), and if a custom threshold is desired, the thresholds as: [minimum area to consider],[minimum area to begin adhesion event],[number of frames a cell may "disappear"].
 
 VALID ARGUMENTS: If arguments are invalid, the program will either raise a warning or interrupt the process.
+
+The requirements should be installed for local use:
+```
+pip install -r  Analysis_Material/Video_Analysis/requirements.txt
+```
 
 To run this process in the command line, use the following format (once again, frames_range and custom_thresh are optional parameters and they may be excluded)
 ```

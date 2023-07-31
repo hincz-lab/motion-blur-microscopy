@@ -16,7 +16,7 @@ Hello, and welcome to the Github page which houses the code and data used for th
 1. Training Code/Data
 2. Analysis Code/Data
 
-Code and data for the two larger categories can be found in the [Training_Material](/Training_Material/) and [Analysis_Material](/Analysis_Material) directories respectively. The following sections will guide readers on how to navigate both categories.
+Code and data for the two larger categories can be found in the [Training_Material](/Training_Material/) and [Analysis_Material](/Analysis_Material) directories respectively. Please note, this Github only contains representative inputs and results. If a reader wants access to the complete data set for the project, please navigate to our OSF repository [here](https://osf.io/uy3rx/). The following sections will guide readers on how to navigate both categories.
 
 The most recent stable versions of libraries which can be used to run all of the code are as follows:
 

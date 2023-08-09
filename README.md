@@ -370,3 +370,6 @@ The code in this section is used to take data generated from raw inputs and crea
     - python 3.9.15
     - matplotlib 3.6.2
     - numpy 1.23.4
+
+## Model download
+Our models can be downloaded from huggingface at [ayeshagonzales/MBM_Model](https://huggingface.co/ayeshagonzales/MBM_Model).

@@ -1,7 +1,5 @@
 # motion-blur-microscopy
 
-**This README file is currently under construction.
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Training Code/Data Navigation](#training-codedata-navigation)
